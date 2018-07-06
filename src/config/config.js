@@ -13,5 +13,8 @@ module.exports = {
       storage: './cooking.sqlite',
       operatorsAliases: Op
     }
+  },
+  authentication: {
+    jwtSecret: process.env.JWT_SECRET || 'secret'
   }
 }

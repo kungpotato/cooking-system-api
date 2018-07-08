@@ -13,6 +13,12 @@ module.exports = (app) => {
   app.get('/cooks',
     CookingController.index
   )
+  app.get('/cooks/:cookId',
+    CookingController.show
+  )
+  app.put('/cooks/:cookId',
+    CookingController.put
+  )
   app.post('/cooks',
     CookingController.post
   )

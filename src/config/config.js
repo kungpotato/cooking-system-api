@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
+const path = require('path')
 
 module.exports = {
   port: process.env.PORT || 8000,
@@ -10,7 +11,7 @@ module.exports = {
     options: {
       dialect: process.env.DB_DIALECT || 'sqlite',
       host: process.env.DB_HOST || 'localhost',
-      storage: './cooking.sqlite',
+      storage: path.resolve(__dirname, '../../cooking.sqlite'),
       operatorsAliases: Op
     }
   },

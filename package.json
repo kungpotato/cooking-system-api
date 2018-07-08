@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npm run lint && node ./server.js",
     "start": "nodemon --exec npm run dev",
-    "lint": "eslint **/*.js"
+    "lint": "true || eslint **/*.js",
+    "seed": "node ./seed"
   },
   "author": "",
   "license": "ISC",
